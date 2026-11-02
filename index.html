@@ -287,10 +287,14 @@ form{display:grid;grid-template-columns:1fr 1fr;gap:16px;background:var(--surfac
 .fld input,.fld select,.fld textarea{font:inherit;font-size:.95rem;color:var(--ink);background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:.7em .8em;width:100%}
 .fld input:focus,.fld select:focus,.fld textarea:focus{outline:2px solid var(--cold);outline-offset:0;border-color:var(--cold)}
 form .btn{justify-self:start}
+.f-priv{grid-column:1/-1;font-size:.8rem;color:var(--muted);margin:0}
+form{position:relative}
 .f-ok{grid-column:1/-1;background:var(--cold-soft);border-radius:8px;padding:12px 14px;font-size:.92rem}
 @media (max-width:860px){.contact-grid{grid-template-columns:1fr}}
 @media (max-width:520px){form{grid-template-columns:1fr}}
 
+.foot-co{display:grid;gap:6px;min-width:0}
+.foot-legal{font-size:.8rem}
 footer{padding-block:36px;border-top:1px solid var(--line);font-size:.85rem;color:var(--muted)}
 .foot{display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:space-between;align-items:center}
 </style>
@@ -661,6 +665,8 @@ footer{padding-block:36px;border-top:1px solid var(--line);font-size:.85rem;colo
       <p class="lead" data-i="f_sub">…</p>
     </div>
     <form id="demo" novalidate>
+      <input type="hidden" name="_subject" value="Ergaxis – demo request">
+      <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
       <div class="fld"><label for="fn" data-i="f_name">Full name</label><input id="fn" name="name" autocomplete="name" required></div>
       <div class="fld"><label for="fc" data-i="f_co">Company</label><input id="fc" name="company" autocomplete="organization" required></div>
       <div class="fld"><label for="fe" data-i="f_mail">Work email</label><input id="fe" name="email" type="email" autocomplete="email" required></div>
@@ -682,6 +688,7 @@ footer{padding-block:36px;border-top:1px solid var(--line);font-size:.85rem;colo
         </select></div>
       <div class="fld full"><label for="fm" data-i="f_msg">Message (optional)</label><textarea id="fm" name="message" rows="4"></textarea></div>
       <button class="btn btn-solid" type="submit" data-i="cta_demo">Request a demo</button>
+      <p class="f-priv" data-i="f_priv">We use the details you send only to answer your request.</p>
       <p class="f-ok" id="fok" hidden></p>
     </form>
   </div>
@@ -690,8 +697,11 @@ footer{padding-block:36px;border-top:1px solid var(--line);font-size:.85rem;colo
 
 <footer>
   <div class="wrap foot">
-    <span><strong style="color:var(--ink)">Ergaxis</strong> · <span data-i="ft_op">Operated by PRO SMART WORK S.R.L., Romania</span></span>
-    <span>© 2026 · EN · RO · FR</span>
+    <div class="foot-co">
+      <span><strong style="color:var(--ink)">Ergaxis</strong> · <span data-i="ft_op">Operated by PRO SMART WORK S.R.L., Romania</span></span>
+      <span class="foot-legal"><span data-i="ft_cui">VAT ID (CUI)</span> 43529707 · <span data-i="ft_reg">Trade Register</span> J23/81/2021 · <span data-i="ft_seat">Registered office</span>: Str. Aviatorilor nr. 21, Corbeanca, jud. Ilfov, 077065, <span data-i="ft_ro">Romania</span></span>
+    </div>
+    <span>© 2026 Ergaxis · EN · RO · FR</span>
   </div>
 </footer>
 
@@ -805,6 +815,7 @@ hl_sub:"A personal medical record for patients in Romania. Upload your test resu
 hl_f:"Blood tests, CT, ultrasound and medical history in one place|Photograph a result on your phone or upload it from your laptop|Values read automatically and confirmed by you with one click|Indicators chosen for the conditions you declare|Trends against guideline targets, for example LDL cholesterol|Data stored on servers in the EU",
 hl_status:"In development · launching in Romania",hl_note:"My Medical Record does not replace your doctor. It keeps your records in order so you can bring them to every consultation.",
 hl_ch_t:"LDL cholesterol · mg/dL",hl_ch_ex:"Example data",hl_ch_tg:"Target 55",hl_ch_cap:"From 132 to 52 mg/dL: the target is reached in November.",
+ft_cui:"VAT ID (CUI)",ft_reg:"Trade Register",ft_seat:"Registered office",ft_ro:"Romania",f_priv:"We use the details you send only to answer your request.",f_sent:"Thank you. Your message was sent and we will reply by email.",f_fail:"The message could not be sent. Please try again in a few minutes.",f_sending:"Sending…",
 ft_op:"Operated by PRO SMART WORK S.R.L., Romania",rank_zero:"Set at least one weight above zero."
 },
 ro:{
@@ -915,6 +926,7 @@ hl_sub:"Un dosar medical personal pentru pacienții din România. Încarci anali
 hl_f:"Analize de sânge, CT, ecografii și istoric medical într-un singur loc|Fotografiezi rezultatul cu telefonul sau îl încarci de pe laptop|Valori citite automat și confirmate de tine cu un clic|Indicatori aleși după afecțiunile pe care le declari|Evoluția față de țintele din ghiduri, de exemplu colesterolul LDL|Date păstrate pe servere din UE",
 hl_status:"În dezvoltare · lansare în România",hl_note:"Dosarul meu medical nu îți înlocuiește medicul. Îți ține evidența în ordine, ca să o ai la fiecare consultație.",
 hl_ch_t:"Colesterol LDL · mg/dL",hl_ch_ex:"Date de exemplu",hl_ch_tg:"Țintă 55",hl_ch_cap:"De la 132 la 52 mg/dL: ținta e atinsă în noiembrie.",
+ft_cui:"CUI",ft_reg:"Nr. Reg. Com.",ft_seat:"Sediu social",ft_ro:"România",f_priv:"Folosim datele trimise doar pentru a-ți răspunde la solicitare.",f_sent:"Mulțumim. Mesajul a fost trimis și îți vom răspunde pe e-mail.",f_fail:"Mesajul nu a putut fi trimis. Încearcă din nou peste câteva minute.",f_sending:"Se trimite…",
 ft_op:"Operată de PRO SMART WORK S.R.L., România",rank_zero:"Setează cel puțin o pondere mai mare decât zero."
 },
 fr:{
@@ -1025,6 +1037,7 @@ hl_sub:"Un dossier médical personnel pour les patients en Roumanie. Déposez vo
 hl_f:"Analyses sanguines, scanner, échographies et antécédents au même endroit|Photographiez un résultat avec votre téléphone ou déposez-le depuis votre ordinateur|Valeurs lues automatiquement et confirmées par vous en un clic|Indicateurs choisis selon les pathologies que vous déclarez|Évolution par rapport aux cibles des recommandations, par exemple le LDL-cholestérol|Données hébergées sur des serveurs dans l'UE",
 hl_status:"En développement · lancement en Roumanie",hl_note:"Mon dossier médical ne remplace pas votre médecin. Il tient vos documents en ordre pour chaque consultation.",
 hl_ch_t:"LDL-cholestérol · mg/dL",hl_ch_ex:"Données d'exemple",hl_ch_tg:"Cible 55",hl_ch_cap:"De 132 à 52 mg/dL : la cible est atteinte en novembre.",
+ft_cui:"CUI (identifiant fiscal)",ft_reg:"Registre du commerce",ft_seat:"Siège social",ft_ro:"Roumanie",f_priv:"Nous utilisons vos données uniquement pour répondre à votre demande.",f_sent:"Merci. Votre message a été envoyé et nous vous répondrons par e-mail.",f_fail:"Le message n'a pas pu être envoyé. Réessayez dans quelques minutes.",f_sending:"Envoi…",
 ft_op:"Exploitée par PRO SMART WORK S.R.L., Roumanie",rank_zero:"Fixez au moins une pondération supérieure à zéro."
 }};
 
@@ -1063,15 +1076,24 @@ function rank(){
 }
 W.forEach(x=>x.addEventListener("input",rank));
 
-/* Preview form: validates locally, sends nothing */
+/* Contact form: sent to the form service when FORM_ENDPOINT is set, otherwise preview only */
+const FORM_ENDPOINT="";   // e.g. "https://formspree.io/f/XXXXXXXX"
 const form=document.getElementById("demo");
-form.addEventListener("submit",e=>{
+form.addEventListener("submit",async e=>{
   e.preventDefault();
   const v=id=>document.getElementById(id).value.trim();
-  const valid=v("fn")&&v("fc")&&/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v("fe"));
   const ok=document.getElementById("fok");
-  ok.textContent=valid?T[lang].f_ok:T[lang].f_err;
+  const valid=v("fn")&&v("fc")&&/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v("fe"));
   ok.hidden=false;
+  if(!valid){ok.textContent=T[lang].f_err;return;}
+  if(!FORM_ENDPOINT){ok.textContent=T[lang].f_ok;return;}
+  const btn=form.querySelector('button[type="submit"]');btn.disabled=true;ok.textContent=T[lang].f_sending;
+  try{
+    const r=await fetch(FORM_ENDPOINT,{method:"POST",body:new FormData(form),headers:{Accept:"application/json"}});
+    if(!r.ok)throw new Error(r.status);
+    ok.textContent=T[lang].f_sent;form.reset();
+  }catch(err){ok.textContent=T[lang].f_fail;}
+  finally{btn.disabled=false;}
 });
 
 let saved="en";try{saved=localStorage.getItem("ep-lang")||"en"}catch(e){}
