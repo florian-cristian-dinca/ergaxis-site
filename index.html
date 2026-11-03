@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="Ergaxis develops web software for engineering, training and health: an engineering suite for energy and decarbonisation projects, plant simulators for training and a personal medical record.">
+<meta name="description" content="Ergaxis develops web software for engineering and training: an engineering suite for energy and decarbonisation projects and plant simulators for training.">
 <style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0;font-family:system-ui,sans-serif;font-size:14px}img{max-width:100%}[hidden]{display:none!important}</style>
 <title>Ergaxis</title>
 <meta name="claude:viewport-fit-sides" content="cover">
@@ -69,30 +69,7 @@ section{padding-block:clamp(64px,9vw,112px)}
 .hero h2.big{font-size:clamp(2rem,4.4vw,3.4rem);font-weight:780}
 .hero h2.big em{font-style:normal;color:var(--cold)}
 @media (max-width:900px){.hx-grid{grid-template-columns:1fr}}
-/* health */
-.health{background:var(--surface);border-block:1px solid var(--line)}
-.health-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,64px);align-items:center}
-.health-copy{display:grid;gap:18px;min-width:0;justify-items:start}
-.hl-list{list-style:none;margin:0;padding:0;display:grid;gap:10px}
-.hl-list li{display:flex;gap:12px}
-.hl-list li::before{content:"";flex:none;width:16px;height:2px;background:var(--hot);margin-top:.8em}
-.hl-note{font-size:.88rem;color:var(--muted);border-left:2px solid var(--line);padding-left:12px}
-.trend{margin:0;border:1px solid var(--line);border-radius:14px;padding:18px;background:var(--paper);min-width:0}
-.trend-top{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;font-family:var(--f-mono);font-size:.74rem;color:var(--muted);letter-spacing:.04em;margin-bottom:6px}
-.trend-top .ex{color:var(--hot)}
-.trend svg{width:100%;height:auto;display:block}
-.trend .grid line{stroke:var(--line);stroke-width:1}
-.trend .ylab text,.trend .xlab text{fill:var(--muted);font:11px var(--f-mono)}
-.trend .ylab text{text-anchor:end}
-.trend .xlab text{text-anchor:middle}
-.trend .target{stroke:var(--hot);stroke-width:2;stroke-dasharray:6 5}
-.trend .tlab{fill:var(--hot);font:600 11px var(--f-mono)}
-.trend .area{fill:var(--cold);opacity:.12}
-.trend .ln{fill:none;stroke:var(--cold);stroke-width:3;stroke-linejoin:round}
-.trend .pts circle{fill:var(--surface);stroke:var(--cold);stroke-width:2.5}
-.trend .pts .end{fill:var(--cold)}
-.trend-cap{font-size:.88rem;color:var(--muted);margin-top:6px}
-@media (max-width:860px){.health-grid{grid-template-columns:1fr}}
+
 
 /* header */
 header{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:color-mix(in srgb,var(--paper) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
@@ -136,6 +113,7 @@ header{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:co
 .docs{display:flex;flex-wrap:wrap;gap:8px;align-items:center;border-top:1px dashed var(--line);margin-top:10px;padding-top:12px}
 .docs small{font-family:var(--f-mono);font-size:.7rem;color:var(--muted);letter-spacing:.05em;text-transform:uppercase;margin-right:4px}
 .chip{display:inline-flex;align-items:center;gap:6px;font-size:.8rem;font-weight:500;padding:.35em .75em;border-radius:6px;background:var(--cold-soft);color:var(--ink)}
+.chip-soon{background:transparent;border:1px dashed var(--line);color:var(--muted)}
 .chip::before{content:"";width:9px;height:11px;border:1.5px solid var(--cold);border-radius:1.5px}
 @media (max-width:900px){.hero-grid{grid-template-columns:1fr}}
 
@@ -311,7 +289,6 @@ footer{padding-block:36px;border-top:1px solid var(--line);font-size:.85rem;colo
       <a href="#energy" data-i="nav_energy">Energy</a>
       <a href="#products" data-i="nav_products">Products</a>
       <a href="#simulators" data-i="nav_academy">Academy</a>
-      <a href="#health" data-i="nav_health">Health</a>
     </nav>
     <div class="lang" role="group" aria-label="Language">
       <button type="button" id="l-en" data-l="en" aria-pressed="true">EN</button>
@@ -327,7 +304,7 @@ footer{padding-block:36px;border-top:1px solid var(--line);font-size:.85rem;colo
 <section class="hx">
   <div class="wrap hx-grid">
     <div class="hx-copy">
-      <span class="eyebrow" data-i="hx_eyebrow">Ergaxis · Software for engineering, training and health</span>
+      <span class="eyebrow" data-i="hx_eyebrow">Ergaxis · Software for engineering, training and more</span>
       <h1 data-i="hx_title">Software built on <em>engineering rigour.</em></h1>
       <p class="lead" data-i="hx_sub">…</p>
       <div class="cta-row">
@@ -346,12 +323,7 @@ footer{padding-block:36px;border-top:1px solid var(--line);font-size:.85rem;colo
         <span class="line-body"><b>Ergaxis Academy</b><span data-i="l2d"></span><small data-i="l2m"></small></span>
         <span class="line-go" aria-hidden="true">→</span>
       </a>
-      <a class="line l-he" href="#health">
-        <svg class="line-ic" viewBox="0 0 48 48" aria-hidden="true"><path d="M4 30h9l4-12 6 20 5-14 3 6h13" fill="none" stroke="var(--cold)" stroke-width="3.5" stroke-linejoin="round"/><path d="M4 12h40" stroke="var(--hot)" stroke-width="2.5" stroke-dasharray="4 3"/></svg>
-        <span class="line-body"><b>Ergaxis Health</b><span data-i="l3d"></span><small data-i="l3m"></small></span>
-        <span class="line-go" aria-hidden="true">→</span>
-      </a>
-    </div>
+      </div>
   </div>
 </section>
 
@@ -415,8 +387,9 @@ footer{padding-block:36px;border-top:1px solid var(--line);font-size:.85rem;colo
       <figcaption class="docs">
         <small data-i="hero_docs_label">Generated in EN · RO · FR</small>
         <span class="chip" data-i="doc_fs">Feasibility study</span>
-        <span class="chip" data-i="doc_bp">Business plan</span>
-        <span class="chip" data-i="doc_ce">Cost estimate</span>
+        <span class="chip" data-i="doc_ce">Cost estimate (RO)</span>
+        <span class="chip" data-i="doc_ppp">PPP study (RO)</span>
+        <span class="chip chip-soon" data-i="doc_bp">Business plan · soon</span>
       </figcaption>
     </figure>
   </div>
@@ -510,13 +483,13 @@ footer{padding-block:36px;border-top:1px solid var(--line);font-size:.85rem;colo
     <div class="sec-head">
       <span class="eyebrow" data-i="ch_eyebrow">Technology chains</span>
       <h2 data-i="ch_title">…</h2>
-      <div class="chain-count"><b>20+</b><p class="lead" data-i="ch_sub">…</p></div>
+      <div class="chain-count"><b>30+</b><p class="lead" data-i="ch_sub">…</p></div>
     </div>
     <div class="chains">
       <div class="chain"><h3 data-i="c1t"></h3><p data-i="c1p"></p><span class="status" data-i="st_av">Available</span></div>
       <div class="chain"><h3 data-i="c2t"></h3><p data-i="c2p"></p><span class="status" data-i="st_av">Available</span></div>
       <div class="chain"><h3 data-i="c3t"></h3><p data-i="c3p"></p><span class="status" data-i="st_av">Available</span></div>
-      <div class="chain"><h3 data-i="c4t"></h3><p data-i="c4p"></p><span class="status v" data-i="st_val">In final validation</span></div>
+      <div class="chain"><h3 data-i="c4t"></h3><p data-i="c4p"></p><span class="status" data-i="st_av">Available</span></div>
       <div class="chain"><h3 data-i="c5t"></h3><p data-i="c5p"></p><span class="status" data-i="st_av">Available</span></div>
       <div class="chain"><h3 data-i="c6t"></h3><p data-i="c6p"></p><span class="status" data-i="st_av">Available</span></div>
       <div class="chain"><h3 data-i="c7t"></h3><p data-i="c7p"></p><span class="status" data-i="st_av">Available</span></div>
@@ -626,36 +599,6 @@ footer{padding-block:36px;border-top:1px solid var(--line);font-size:.85rem;colo
   </div>
 </section>
 
-<!-- HEALTH -->
-<section id="health" class="health">
-  <div class="wrap health-grid">
-    <div class="health-copy">
-      <span class="eyebrow" data-i="hl_eyebrow">Ergaxis Health</span>
-      <h2 data-i="hl_title">My Medical Record</h2>
-      <p class="lead" data-i="hl_sub">…</p>
-      <ul class="hl-list" data-l="hl_f"></ul>
-      <span class="status v" data-i="hl_status">In development</span>
-      <p class="hl-note" data-i="hl_note">…</p>
-    </div>
-    <figure class="trend" aria-label="Example LDL cholesterol trend against a target of 55 mg/dL">
-      <div class="trend-top"><span data-i="hl_ch_t">LDL cholesterol · mg/dL</span><span class="ex" data-i="hl_ch_ex">Example data</span></div>
-      <svg viewBox="0 0 420 240" role="img">
-        <g class="grid">
-          <line x1="44" y1="30" x2="404" y2="30"/><line x1="44" y1="80" x2="404" y2="80"/><line x1="44" y1="130" x2="404" y2="130"/><line x1="44" y1="180" x2="404" y2="180"/>
-        </g>
-        <g class="ylab"><text x="36" y="34">140</text><text x="36" y="84">110</text><text x="36" y="134">80</text><text x="36" y="184">50</text></g>
-        <line class="target" x1="44" y1="171.7" x2="404" y2="171.7"/>
-        <text class="tlab" x="52" y="165" data-i="hl_ch_tg">Target 55</text>
-        <path class="area" d="M64 43.3 L132 66.7 L200 103.3 L268 140 L336 161.7 L384 176.7 L384 205 L64 205 Z"/>
-        <path class="ln" d="M64 43.3 L132 66.7 L200 103.3 L268 140 L336 161.7 L384 176.7"/>
-        <g class="pts"><circle cx="64" cy="43.3" r="4"/><circle cx="132" cy="66.7" r="4"/><circle cx="200" cy="103.3" r="4"/><circle cx="268" cy="140" r="4"/><circle cx="336" cy="161.7" r="4"/><circle class="end" cx="384" cy="176.7" r="6"/></g>
-        <g class="xlab"><text x="64" y="225">Jan</text><text x="132" y="225">Mar</text><text x="200" y="225">May</text><text x="268" y="225">Jul</text><text x="336" y="225">Sep</text><text x="384" y="225">Nov</text></g>
-      </svg>
-      <figcaption class="trend-cap" data-i="hl_ch_cap">132 → 52 mg/dL: target reached in November.</figcaption>
-    </figure>
-  </div>
-</section>
-
 <!-- CONTACT -->
 <section id="contact" class="contactsec">
   <div class="wrap contact-grid">
@@ -684,7 +627,6 @@ footer{padding-block:36px;border-top:1px solid var(--line);font-size:.85rem;colo
           <option value="Scenario Comparison" data-i="p8n">Scenario Comparison</option>
           <option value="Feasibility Study Generator" data-i="p9n">Feasibility Study Generator</option>
           <option value="Training simulators (Academy)" data-i="o_sims">Training simulators</option>
-          <option value="My Medical Record (Health)" data-i="o_health">My Medical Record</option>
         </select></div>
       <div class="fld full"><label for="fm" data-i="f_msg">Message (optional)</label><textarea id="fm" name="message" rows="4"></textarea></div>
       <button class="btn btn-solid" type="submit" data-i="cta_demo">Request a demo</button>
@@ -708,6 +650,7 @@ footer{padding-block:36px;border-top:1px solid var(--line);font-size:.85rem;colo
 <script>
 const T={
 en:{
+doc_ppp:"PPP study (RO)",
 nav_products:"Products",nav_workflow:"How it works",nav_chains:"Technology chains",nav_decision:"Decision analysis",
 cta_demo:"Request a demo",cta_products:"Explore the products",
 hero_eyebrow:"Ergaxis Energy · Engineering suite",
@@ -716,7 +659,7 @@ hero_sub:"Ergaxis is a suite of engineering software products for energy and dec
 hs1:"products",hs2:"shared process model",hs3:"report languages",
 flow_title:"Process chain · stream balance",flow_live:"Balanced",
 s_unit:"PROCESS CHAIN",s_bio:"Biomass",s_el:"Electricity",s_ng:"Natural gas",s_h2:"Hydrogen",s_meoh:"Methanol",s_pw:"Power & heat",s_co2:"CO₂ captured",
-hero_docs_label:"Generated in EN · RO · FR",doc_fs:"Feasibility study",doc_bp:"Business plan",doc_ce:"Cost estimate",
+hero_docs_label:"Reports in EN · RO · FR · Romanian legal documents in RO",doc_fs:"Feasibility study",doc_bp:"Business plan · soon",doc_ce:"Cost estimate (RO)",
 pr_eyebrow:"Products",pr_title:"Nine products. Use one, or the whole suite.",
 pr_sub:"Every product works on the same calculated plant, so results stay consistent when you combine them.",
 f1t:"Model",f1p:"The engineering basis of every study.",
@@ -724,23 +667,23 @@ f2t:"Assess",f2p:"Climate and environmental performance.",
 f3t:"Value",f3p:"Costs, returns and risk.",
 f4t:"Decide & report",f4p:"Ranking and investment documents.",
 p1n:"Process Simulator",p1d:"Build a flowsheet from blocks that carry their own equations and close the mass and energy balance of every stream and unit.",
-p1s:"Medium and rigorous unit models|Peng–Robinson flash, NRTL, MESH distillation|IAPWS-95 steam cycles, ORC, heat pumps|Gasifiers, reformers, electrolysers, CO₂ capture and transport",
-p2n:"GHG Counter",p2d:"GHG emission avoidance under the EU Innovation Fund methodology, checked against the official calculators.",
+p1s:"Rigorous models for hydrogen and methanol, data-sheet models for the other routes|Peng–Robinson flash, NRTL, MESH distillation|IAPWS-95 steam cycles, ORC, heat pumps|Gasifiers, reformers, electrolysers, CO₂ capture and transport|Guided wizard, user guide and expert alerts|Data-quality score per input, with what to improve first",
+p2n:"GHG Counter",p2d:"GHG emission avoidance under the EU Innovation Fund methodology, checked against our reconstruction of the official calculators.",
 p2s:"IF25-NZT methodology, version 5.1|Renewables, energy-intensive industry, carbon capture credit|Call check: minimum and score of relative avoidance",
 p3n:"Carbon Footprint",p3d:"Carbon footprint of the product per kg at the plant gate, kept separate from the Innovation Fund result.",
 p3s:"ISO 14067-based, cradle-to-gate|Biogenic carbon and removals tracked apart|GWP100 of Regulation (EU) 2020/1044",
 p4n:"Environmental Inventory",p4d:"Air emissions at the site and upstream, water use and solid residues of the calculated plant.",
 p4s:"EMEP/EEA Guidebook 2023, Tier 2|Check against emission limit values|Water withdrawal, consumption, residues",
 p5n:"Techno-Economic Analysis",p5d:"Investment, operating costs and financial indicators built from the plant inventory.",
-p5s:"CAPEX scaling and cost indices|LCOX, NPV, IRR, payback, DSCR|Break-even prices and sensitivity",
+p5s:"CAPEX scaling and cost indices|LCOX, NPV, IRR, payback, DSCR|Break-even prices and sensitivity|Revenue from CO₂ removals: BECCS, DAC, biochar",
 p6n:"Cost-Benefit & Risk Analysis",p6d:"Financial and economic analysis with externalities, and a risk assessment of every option.",
 p6s:"EC Guide to CBA 2014, Vademecum 2021–2027|Shadow cost of carbon, air pollution damage costs|Risk matrix, scenarios, Monte Carlo",
 p7n:"General Cost Estimate",p7d:"The general cost estimate and the PPP expenditure table under Romanian rules, in lei, with VAT.",
 p7s:"HG 907/2016 Annex 7, as amended by HG 1116/2023|PPP and concession table, Annex 7¹|Investment taken from the techno-economic analysis",
-p8n:"Scenario Comparison",p8d:"Up to six scenarios of the same product side by side, ranked by the criteria and weights you choose.",
-p8s:"Cost of CO₂ avoided against a reference|Structure of the levelised cost|User-defined criteria and weights",
+p8n:"Scenario Comparison",p8d:"Up to six scenarios of the same product side by side. The Ergaxis MCDA tool then ranks them by the criteria and weights you choose.",
+p8s:"Cost of CO₂ avoided against a reference|Structure of the levelised cost|Projects and scenarios saved, with import and export",
 p9n:"Feasibility Study Generator",p9d:"Documents built only from calculated results, with the author's sections left to the author.",
-p9s:"HG 907/2016 Annex 4 framework|DOCX and PDF|English, Romanian, French",
+p9s:"International study after UNIDO, in EN, RO and FR|HG 907/2016 Annex 4 and PPP studies (Annexes 4¹ and 3¹), in Romanian|DOCX and PDF",
 cmp_eyebrow:"Why one platform",
 cmp_title:"A study that usually keeps a multidisciplinary team busy for about two months.",
 cmp_body:"Process engineers, economists, environmental and GHG specialists each work in their own spreadsheets and tools. Every change in one assumption has to be carried by hand through the balances, the costs, the emissions and the report. On Ergaxis the products share one model, so a change propagates everywhere at once.",
@@ -754,19 +697,19 @@ w2t:"Build the chain",w2p:"Pick a predefined chain or assemble your own from blo
 w3t:"Close the balances",w3p:"Mass and energy flows are solved for every stream and every unit of the chain.",
 w4t:"Assess",w4p:"GHG avoidance, carbon footprint, environmental inventory, costs and cost-benefit are computed on the same flows.",
 w5t:"Decide",w5p:"Compare scenarios using your own criteria and weights and get a ranking you can explain.",
-w6t:"Document",w6p:"Generate the feasibility study and the cost estimate in English, Romanian or French, then complete the project-specific sections.",
-ch_eyebrow:"Technology chains",ch_title:"Predefined chains, or your own.",ch_sub:"predefined technology chains, grouped in families. Every chain stays fully editable in the Process Simulator.",
+w6t:"Document",w6p:"Generate the feasibility study (international, in English, Romanian or French, or under HG 907/2016, in Romanian), the cost estimate and PPP studies, then complete the project-specific sections.",
+ch_eyebrow:"Technology chains",ch_title:"Predefined chains, or your own.",ch_sub:"predefined technology chains and reference cases, grouped in families. Every chain stays fully editable in the Process Simulator.",
 c1t:"Hydrogen",c1p:"Steam methane reforming with PSA, with or without CO₂ capture; alkaline and PEM electrolysis; biomass gasification with or without BECCS.",
 c2t:"Methanol",c2p:"Gasification of biomass or RDF, with or without CO₂ storage; e-methanol from captured CO₂ and electrolytic hydrogen.",
-c3t:"Ammonia",c3p:"Conventional reforming baseline compared with low-carbon routes.",
-c4t:"Synthetic fuels",c4p:"Fischer–Tropsch synthesis and power-to-liquid.",
+c3t:"Ammonia",c3p:"Green ammonia from electrolytic hydrogen, compared with the EU ETS benchmark.",
+c4t:"Synthetic fuels",c4p:"Fischer–Tropsch synthesis from biomass and power-to-liquid jet fuel.",
 c5t:"Biofuels",c5p:"HVO, FAME, ethanol, hydrothermal liquefaction, pyrolysis and biochar.",
 c6t:"Biogas & biomethane",c6p:"Anaerobic digestion, upgrading, methanation and biogas cogeneration.",
-c7t:"Power & heat",c7p:"Steam cycles, ORC, heat pumps and renewable electricity, heating or cooling.",
-c8t:"CO₂ capture, transport & storage",c8p:"Chemical and physical solvents, membranes, PSA, cryogenics; pipeline, truck, rail and ship; industrial chains such as a clinker kiln with CCS.",
+c7t:"Power & heat",c7p:"Steam cycles, ORC, gas-engine CHP, waste-to-energy and heat pumps. Wind and solar projects through GHG Counter.",
+c8t:"CO₂ capture, transport & storage",c8p:"A configurable capture unit (chemical or physical solvent, membrane, PSA, cryogenic) at user-set performance; direct air capture; transport by pipeline, truck, rail and ship; reference cases such as a clinker kiln with CCS and a CO₂ hub.",
 st_av:"Available",st_val:"In final validation",
 dec_eyebrow:"Customisable MCDA",dec_title:"Your criteria. Your weights. Your ranking.",
-dec_sub:"Move the weights and watch three hydrogen routes re-rank. Scenario Comparison does not impose a definition of the best option: the investor sets the priorities.",
+dec_sub:"Move the weights and watch three hydrogen routes re-rank. Ergaxis does not impose a definition of the best option: the investor sets the priorities.",
 k0:"Cost",k1:"GHG intensity",k2:"Energy efficiency",k3:"Environmental impact",
 r0:"PEM electrolysis (renewable power)",r1:"Steam methane reforming with CO₂ capture",r2:"Biomass gasification",
 dec_note:"Illustrative scores for demonstration. In the product, scores come from the calculated results of each scenario.",
@@ -774,11 +717,11 @@ aud_eyebrow:"Who it is for",aud_title:"Built for the people who prepare and appr
 a1t:"Engineering & consulting firms",a1p:"Deliver feasibility studies and funding applications from one consistent, auditable model.",
 a2t:"Developers & investors",a2p:"Compare technology routes before committing capital.",
 a3t:"Industrial operators",a3p:"Screen decarbonisation options for existing plants and sites.",
-a4t:"Research & universities",a4p:"Explore new process chains with full balances and impact metrics.",
+a4t:"Research & universities",a4p:"Explore new process chains with full balances, emissions and inventory metrics.",
 tr_eyebrow:"Engineering rigour",tr_title:"Built to be checked, not just believed.",
 t1t:"Traceable data",t1p:"Every value carries its source and version, from emission factors to cost assumptions. A value that is missing is shown as missing, never as zero.",
-t2t:"Online, nothing to install",t2p:"Runs in the browser as a hosted service. Models and methodologies are updated centrally for all users.",
-t3t:"Tested against references",t3p:"Results are checked against official calculators and published reference studies before each release.",
+t2t:"Browser-based, nothing to install",t2p:"Works in the browser. The hosted service is in preparation, so models and methodologies will be updated centrally for all users.",
+t3t:"Tested against references",t3p:"An automated test suite checks results against reconstructed official calculators and published reference studies.",
 t4t:"Dedicated deployment",t4p:"For organisations with strict confidentiality requirements, a dedicated environment can be discussed.",
 pl_eyebrow:"Licensing",pl_title:"Use one product, or the whole suite.",
 pl_sub:"Every product is available as an online subscription, on its own or as part of the suite.",
@@ -803,22 +746,16 @@ sm5n:"Smart Grid",sm5d:"Geothermal, wind and hydro plants feeding one grid, with
 sm6n:"CO₂ Capture",sm6d:"Capture CO₂ from flue gas, syngas or air and compare technologies.",sm6s:"Absorption, membranes, adsorption, cryogenics, DAC|Capture cost and utilities|LCA and multi-criteria comparison",
 sm7n:"Ammonia Plant Decarbonisation",sm7d:"A 300 kt/yr ammonia plant: steam methane reforming against RDF and briquette gasification.",sm7s:"Three supply variants|One year of operation from t = 0|Investment payback",
 sm8n:"Simulators for your lab",sm8d:"Licences for classrooms, training centres and control-room teams. Ask for a demonstration on the plant type you teach or operate.",
-nav_energy:"Energy",nav_academy:"Academy",nav_health:"Health",o_health:"My Medical Record (Health)",
-hx_eyebrow:"Ergaxis · Software for engineering, training, health and more",hx_title:"Software built on <em>engineering rigour.</em>",
-hx_sub:"Ergaxis develops web software for several fields. The first three product lines are an engineering suite for energy and decarbonisation projects, plant simulators for training, and a personal medical record. Every Ergaxis product follows the same rule: each result can be traced back to its source.",
+nav_energy:"Energy",nav_academy:"Academy",hx_eyebrow:"Ergaxis · Software for engineering, training and more",hx_title:"Software built on <em>engineering rigour.</em>",
+hx_sub:"Ergaxis develops web software for several fields. The first two product lines are an engineering suite for energy and decarbonisation projects and plant simulators for training. Every Ergaxis product follows the same rule: each result can be traced back to its source.",
 hx_cta1:"Explore the product lines",
 l1d:"Nine engineering products on one process model, from mass balances to the feasibility study.",l1m:"Consultancies · developers · industry",
 l2d:"Synoptic simulators of power and process plants for teaching and operator training.",l2m:"Universities · training centres · operators",
-l3d:"A personal medical record that files your results and follows them against clinical targets.",l3m:"Patients in Romania · in development",
-hl_eyebrow:"Ergaxis Health",hl_title:"My Medical Record",
-hl_sub:"A personal medical record for patients in Romania. Upload your test results and imaging reports. The app files them, follows each indicator over time and shows where it stands against the targets of current clinical guidelines.",
-hl_f:"Blood tests, CT, ultrasound and medical history in one place|Photograph a result on your phone or upload it from your laptop|Values read automatically and confirmed by you with one click|Indicators chosen for the conditions you declare|Trends against guideline targets, for example LDL cholesterol|Data stored on servers in the EU",
-hl_status:"In development · launching in Romania",hl_note:"My Medical Record does not replace your doctor. It keeps your records in order so you can bring them to every consultation.",
-hl_ch_t:"LDL cholesterol · mg/dL",hl_ch_ex:"Example data",hl_ch_tg:"Target 55",hl_ch_cap:"From 132 to 52 mg/dL: the target is reached in November.",
 ft_cui:"VAT ID (CUI)",ft_reg:"Trade Register",ft_seat:"Registered office",ft_ro:"Romania",f_priv:"We use the details you send only to answer your request.",f_sent:"Thank you. Your message was sent and we will reply by email.",f_fail:"The message could not be sent. Please try again in a few minutes.",f_sending:"Sending…",
 ft_op:"Operated by PRO SMART WORK S.R.L., Romania",rank_zero:"Set at least one weight above zero."
 },
 ro:{
+doc_ppp:"Studiu PPP (RO)",
 nav_products:"Produse",nav_workflow:"Cum funcționează",nav_chains:"Lanțuri tehnologice",nav_decision:"Analiză decizională",
 cta_demo:"Solicită o demonstrație",cta_products:"Descoperă produsele",
 hero_eyebrow:"Ergaxis Energy · Suită de inginerie",
@@ -827,7 +764,7 @@ hero_sub:"Ergaxis este o suită de produse software de inginerie pentru proiecte
 hs1:"produse",hs2:"model de proces comun",hs3:"limbi pentru rapoarte",
 flow_title:"Lanț tehnologic · bilanț pe fluxuri",flow_live:"Bilanț închis",
 s_unit:"LANȚ TEHNOLOGIC",s_bio:"Biomasă",s_el:"Energie electrică",s_ng:"Gaz natural",s_h2:"Hidrogen",s_meoh:"Metanol",s_pw:"Energie și căldură",s_co2:"CO₂ captat",
-hero_docs_label:"Generate în EN · RO · FR",doc_fs:"Studiu de fezabilitate",doc_bp:"Plan de afaceri",doc_ce:"Deviz general",
+hero_docs_label:"Rapoarte în EN · RO · FR · documente legale românești în RO",doc_fs:"Studiu de fezabilitate",doc_bp:"Plan de afaceri · în curând",doc_ce:"Deviz general (RO)",
 pr_eyebrow:"Produse",pr_title:"Nouă produse. Folosești unul sau întreaga suită.",
 pr_sub:"Toate produsele lucrează pe aceeași instalație calculată, astfel încât rezultatele rămân coerente atunci când le combini.",
 f1t:"Modelare",f1p:"Baza inginerească a oricărui studiu.",
@@ -835,23 +772,23 @@ f2t:"Evaluare",f2p:"Performanța climatică și de mediu.",
 f3t:"Valoare",f3p:"Costuri, rentabilitate și risc.",
 f4t:"Decizie și raportare",f4p:"Clasament și documentații de investiție.",
 p1n:"Simulator de proces",p1d:"Construiești schema de proces din blocuri care își cunosc ecuațiile și închizi bilanțul masic și energetic pe fiecare flux și echipament.",
-p1s:"Modele de echipamente medii și riguroase|Flash Peng–Robinson, NRTL, distilare MESH|Cicluri cu abur IAPWS-95, ORC, pompe de căldură|Gazeificatoare, reformere, electrolizoare, captare și transport CO₂",
-p2n:"GHG Counter",p2d:"Emisii GHG evitate după metodologia Innovation Fund a UE, verificate față de calculatoarele oficiale.",
+p1s:"Modele riguroase pentru hidrogen și metanol, modele pe fișe tehnice pentru celelalte rute|Flash Peng–Robinson, NRTL, distilare MESH|Cicluri cu abur IAPWS-95, ORC, pompe de căldură|Gazeificatoare, reformere, electrolizoare, captare și transport CO₂|Asistent ghidat, ghid de utilizare și alerte expert|Scor de calitate a datelor pe fiecare intrare, cu ce trebuie îmbunătățit întâi",
+p2n:"GHG Counter",p2d:"Emisii GHG evitate după metodologia Innovation Fund a UE, verificate față de reconstrucția calculatoarelor oficiale.",
 p2s:"Metodologia IF25-NZT, versiunea 5.1|Surse regenerabile, industrii energointensive, credit de captare a carbonului|Verificarea apelului: pragul minim și punctajul emisiilor evitate relative",
 p3n:"Amprentă de carbon",p3d:"Amprenta de carbon a produsului pe kg la poarta instalației, separată de rezultatul Innovation Fund.",
 p3s:"Bazată pe ISO 14067, cradle-to-gate|Carbon biogen și eliminări urmărite separat|GWP100 conform Regulamentului (UE) 2020/1044",
 p4n:"Inventar de mediu",p4d:"Emisii în aer pe amplasament și în amonte, consum de apă și reziduuri solide ale instalației calculate.",
 p4s:"Ghidul EMEP/EEA 2023, Tier 2|Verificare față de valorile limită de emisie|Prelevare și consum de apă, reziduuri",
 p5n:"Analiză tehnico-economică",p5d:"Investiție, costuri de operare și indicatori financiari construiți din inventarul instalației.",
-p5s:"Scalarea CAPEX și indici de cost|LCOX, VNA, RIR, recuperare, DSCR|Prețuri de echilibru și analiză de sensibilitate",
+p5s:"Scalarea CAPEX și indici de cost|LCOX, VNA, RIR, recuperare, DSCR|Prețuri de echilibru și analiză de sensibilitate|Venituri din eliminări de CO₂: BECCS, DAC, biochar",
 p6n:"Analiză cost-beneficiu și de risc",p6d:"Analiză financiară și economică cu externalități, plus evaluarea riscurilor fiecărei opțiuni.",
 p6s:"Ghidul CE pentru ACB 2014, Vademecum 2021–2027|Costul social al carbonului, costuri ale daunelor din poluarea aerului|Matrice de risc, scenarii, Monte Carlo",
 p7n:"Deviz general",p7d:"Devizul general și tabelul cheltuielilor PPP conform reglementărilor românești, în lei, cu TVA.",
 p7s:"HG 907/2016 Anexa 7, modificată prin HG 1116/2023|Tabel PPP și concesiune, Anexa 7¹|Investiție preluată din analiza tehnico-economică",
-p8n:"Comparație de scenarii",p8d:"Până la șase scenarii ale aceluiași produs, unul lângă altul, clasate după criteriile și ponderile alese de tine.",
-p8s:"Costul CO₂ evitat față de o referință|Structura costului nivelat|Criterii și ponderi definite de utilizator",
+p8n:"Comparație de scenarii",p8d:"Până la șase scenarii ale aceluiași produs, unul lângă altul. Instrumentul MCDA Ergaxis le clasează apoi după criteriile și ponderile alese de tine.",
+p8s:"Costul CO₂ evitat față de o referință|Structura costului nivelat|Proiecte și scenarii salvate, cu import și export",
 p9n:"Generator de studii de fezabilitate",p9d:"Documente construite numai din rezultatele calculate; secțiunile autorului rămân autorului.",
-p9s:"Conținutul-cadru din HG 907/2016 Anexa 4|DOCX și PDF|Engleză, română, franceză",
+p9s:"Studiu internațional după UNIDO, în EN, RO și FR|HG 907/2016 Anexa 4 și studii PPP (Anexele 4¹ și 3¹), în română|DOCX și PDF",
 cmp_eyebrow:"De ce o singură platformă",
 cmp_title:"Un studiu care ține de regulă ocupată o echipă multidisciplinară circa două luni.",
 cmp_body:"Inginerii de proces, economiștii, specialiștii de mediu și GHG lucrează fiecare în propriile foi de calcul și instrumente. Orice modificare a unei ipoteze trebuie purtată manual prin bilanțuri, costuri, emisii și raport. În Ergaxis produsele împart același model, astfel încât o modificare se propagă peste tot deodată.",
@@ -865,19 +802,19 @@ w2t:"Construiești lanțul",w2p:"Alegi un lanț predefinit sau îl asamblezi din
 w3t:"Închizi bilanțurile",w3p:"Fluxurile masice și energetice se rezolvă pentru fiecare flux și fiecare echipament al lanțului.",
 w4t:"Evaluezi",w4p:"Emisiile GHG evitate, amprenta de carbon, inventarul de mediu, costurile și analiza cost-beneficiu se calculează pe aceleași fluxuri.",
 w5t:"Decizi",w5p:"Compari scenariile cu propriile criterii și ponderi și obții un clasament pe care îl poți justifica.",
-w6t:"Documentezi",w6p:"Generezi studiul de fezabilitate și devizul în engleză, română sau franceză, apoi completezi secțiunile specifice proiectului.",
-ch_eyebrow:"Lanțuri tehnologice",ch_title:"Lanțuri predefinite sau propriile tale configurații.",ch_sub:"lanțuri tehnologice predefinite, grupate pe familii. Fiecare lanț rămâne complet editabil în Simulatorul de proces.",
+w6t:"Documentezi",w6p:"Generezi studiul de fezabilitate (internațional, în engleză, română sau franceză, ori după HG 907/2016, în română), devizul și studiile PPP, apoi completezi secțiunile specifice proiectului.",
+ch_eyebrow:"Lanțuri tehnologice",ch_title:"Lanțuri predefinite sau propriile tale configurații.",ch_sub:"lanțuri tehnologice predefinite și cazuri de referință, grupate pe familii. Fiecare lanț rămâne complet editabil în Simulatorul de proces.",
 c1t:"Hidrogen",c1p:"Reformarea cu abur a metanului cu PSA, cu sau fără captare CO₂; electroliză alcalină și PEM; gazeificarea biomasei cu sau fără BECCS.",
 c2t:"Metanol",c2p:"Gazeificarea biomasei sau a RDF, cu sau fără stocarea CO₂; e-metanol din CO₂ captat și hidrogen electrolitic.",
-c3t:"Amoniac",c3p:"Varianta de referință cu reformare convențională comparată cu rute cu emisii reduse.",
-c4t:"Combustibili sintetici",c4p:"Sinteză Fischer–Tropsch și power-to-liquid.",
+c3t:"Amoniac",c3p:"Amoniac verde din hidrogen electrolitic, comparat cu benchmark-ul EU ETS.",
+c4t:"Combustibili sintetici",c4p:"Sinteză Fischer–Tropsch din biomasă și combustibil de aviație power-to-liquid.",
 c5t:"Biocombustibili",c5p:"HVO, FAME, etanol, lichefiere hidrotermală, piroliză și biochar.",
 c6t:"Biogaz și biometan",c6p:"Digestie anaerobă, purificare, metanare și cogenerare pe biogaz.",
-c7t:"Energie și căldură",c7p:"Cicluri cu abur, ORC, pompe de căldură și producere de energie electrică, căldură sau frig din surse regenerabile.",
-c8t:"Captarea, transportul și stocarea CO₂",c8p:"Solvenți chimici și fizici, membrane, PSA, criogenie; conductă, camion, tren și navă; lanțuri industriale, de exemplu un cuptor de clincher cu CCS.",
+c7t:"Energie și căldură",c7p:"Cicluri cu abur, ORC, cogenerare cu motoare pe gaz, valorificarea energetică a deșeurilor și pompe de căldură. Proiectele eoliene și solare prin GHG Counter.",
+c8t:"Captarea, transportul și stocarea CO₂",c8p:"Unitate de captare configurabilă (solvent chimic sau fizic, membrane, PSA, criogenie) cu performanța setată de utilizator; captare directă din aer; transport prin conductă, camion, tren și navă; cazuri de referință, de exemplu un cuptor de clincher cu CCS și un hub de CO₂.",
 st_av:"Disponibil",st_val:"În validare finală",
 dec_eyebrow:"Analiză multicriterială personalizabilă",dec_title:"Criteriile tale. Ponderile tale. Clasamentul tău.",
-dec_sub:"Modifică ponderile și urmărește cum se reordonează trei rute de producere a hidrogenului. Comparația de scenarii nu impune o definiție a soluției optime: investitorul își stabilește prioritățile.",
+dec_sub:"Modifică ponderile și urmărește cum se reordonează trei rute de producere a hidrogenului. Ergaxis nu impune o definiție a soluției optime: investitorul își stabilește prioritățile.",
 k0:"Cost",k1:"Intensitate GHG",k2:"Eficiență energetică",k3:"Impact asupra mediului",
 r0:"Electroliză PEM (energie regenerabilă)",r1:"Reformarea metanului cu captare CO₂",r2:"Gazeificarea biomasei",
 dec_note:"Scoruri ilustrative, pentru demonstrație. În produs, scorurile provin din rezultatele calculate ale fiecărui scenariu.",
@@ -885,11 +822,11 @@ aud_eyebrow:"Pentru cine",aud_title:"Pentru cei care pregătesc și aprobă inve
 a1t:"Firme de inginerie și consultanță",a1p:"Livrează studii de fezabilitate și cereri de finanțare dintr-un singur model coerent și auditabil.",
 a2t:"Dezvoltatori și investitori",a2p:"Compară rutele tehnologice înainte de a angaja capital.",
 a3t:"Operatori industriali",a3p:"Evaluează opțiunile de decarbonizare pentru instalații și amplasamente existente.",
-a4t:"Cercetare și universități",a4p:"Explorează noi lanțuri de proces cu bilanțuri complete și indicatori de impact.",
+a4t:"Cercetare și universități",a4p:"Explorează noi lanțuri de proces cu bilanțuri complete, emisii și indicatori de inventar.",
 tr_eyebrow:"Rigoare inginerească",tr_title:"Construită ca să fie verificată, nu doar crezută.",
 t1t:"Date trasabile",t1p:"Fiecare valoare are sursa și versiunea ei, de la factorii de emisie la ipotezele de cost. O valoare lipsă apare ca lipsă, niciodată ca zero.",
-t2t:"Online, fără instalare",t2p:"Rulează în browser, ca serviciu găzduit. Modelele și metodologiile se actualizează centralizat pentru toți utilizatorii.",
-t3t:"Testată față de referințe",t3p:"Rezultatele sunt verificate față de calculatoarele oficiale și studii de referință publicate înaintea fiecărei versiuni.",
+t2t:"În browser, fără instalare",t2p:"Funcționează în browser. Serviciul găzduit e în pregătire, iar modelele și metodologiile vor fi actualizate centralizat pentru toți utilizatorii.",
+t3t:"Testată față de referințe",t3p:"O suită de teste automate verifică rezultatele față de calculatoarele oficiale reconstruite și studii de referință publicate.",
 t4t:"Implementare dedicată",t4p:"Pentru organizațiile cu cerințe stricte de confidențialitate se poate discuta un mediu dedicat.",
 pl_eyebrow:"Licențiere",pl_title:"Folosești un produs sau întreaga suită.",
 pl_sub:"Fiecare produs este disponibil ca abonament online, independent sau în cadrul suitei.",
@@ -914,22 +851,16 @@ sm5n:"Smart grid",sm5d:"Centrale geotermale, eoliene și hidro conectate la acee
 sm6n:"Captarea CO₂",sm6d:"Capturezi CO₂ din gaze de ardere, gaz de sinteză sau aer și compari tehnologiile.",sm6s:"Absorbție, membrane, adsorbție, criogenie, DAC|Costul captării și utilități|ACV și comparație multicriterială",
 sm7n:"Decarbonizarea unei fabrici de amoniac",sm7d:"O fabrică de 300 kt/an de amoniac: reformare cu abur a metanului față de gazeificarea RDF și a brichetelor.",sm7s:"Trei variante de alimentare|Un an de funcționare de la t = 0|Recuperarea investiției",
 sm8n:"Simulatoare pentru laboratorul tău",sm8d:"Licențe pentru săli de curs, centre de instruire și echipe din camera de comandă. Cere o demonstrație pe tipul de centrală pe care îl predai sau îl operezi.",
-nav_energy:"Energie",nav_academy:"Academy",nav_health:"Sănătate",o_health:"Dosarul meu medical (Health)",
-hx_eyebrow:"Ergaxis · Software pentru inginerie, instruire, sănătate și nu numai",hx_title:"Software construit cu <em>rigoare inginerească.</em>",
-hx_sub:"Ergaxis dezvoltă software web pentru mai multe domenii. Primele trei linii de produse sunt o suită de inginerie pentru proiecte energetice și de decarbonizare, simulatoare de centrale pentru instruire și un dosar medical personal. Fiecare produs Ergaxis respectă aceeași regulă: orice rezultat poate fi urmărit până la sursa lui.",
+nav_energy:"Energie",nav_academy:"Academy",hx_eyebrow:"Ergaxis · Software pentru inginerie, instruire și nu numai",hx_title:"Software construit cu <em>rigoare inginerească.</em>",
+hx_sub:"Ergaxis dezvoltă software web pentru mai multe domenii. Primele două linii de produse sunt o suită de inginerie pentru proiecte energetice și de decarbonizare și simulatoare de centrale pentru instruire. Fiecare produs Ergaxis respectă aceeași regulă: orice rezultat poate fi urmărit până la sursa lui.",
 hx_cta1:"Descoperă liniile de produse",
 l1d:"Nouă produse de inginerie pe un singur model de proces, de la bilanțuri la studiul de fezabilitate.",l1m:"Firme de consultanță · dezvoltatori · industrie",
 l2d:"Simulatoare sinoptice de centrale și instalații pentru învățământ și instruirea operatorilor.",l2m:"Universități · centre de instruire · operatori",
-l3d:"Un dosar medical personal care îți organizează analizele și le urmărește față de țintele clinice.",l3m:"Pacienți din România · în dezvoltare",
-hl_eyebrow:"Ergaxis Health",hl_title:"Dosarul meu medical",
-hl_sub:"Un dosar medical personal pentru pacienții din România. Încarci analizele și rezultatele investigațiilor. Aplicația le organizează, urmărește fiecare indicator în timp și îți arată unde se situează față de țintele din ghidurile clinice actuale.",
-hl_f:"Analize de sânge, CT, ecografii și istoric medical într-un singur loc|Fotografiezi rezultatul cu telefonul sau îl încarci de pe laptop|Valori citite automat și confirmate de tine cu un clic|Indicatori aleși după afecțiunile pe care le declari|Evoluția față de țintele din ghiduri, de exemplu colesterolul LDL|Date păstrate pe servere din UE",
-hl_status:"În dezvoltare · lansare în România",hl_note:"Dosarul meu medical nu îți înlocuiește medicul. Îți ține evidența în ordine, ca să o ai la fiecare consultație.",
-hl_ch_t:"Colesterol LDL · mg/dL",hl_ch_ex:"Date de exemplu",hl_ch_tg:"Țintă 55",hl_ch_cap:"De la 132 la 52 mg/dL: ținta e atinsă în noiembrie.",
 ft_cui:"CUI",ft_reg:"Nr. Reg. Com.",ft_seat:"Sediu social",ft_ro:"România",f_priv:"Folosim datele trimise doar pentru a-ți răspunde la solicitare.",f_sent:"Mulțumim. Mesajul a fost trimis și îți vom răspunde pe e-mail.",f_fail:"Mesajul nu a putut fi trimis. Încearcă din nou peste câteva minute.",f_sending:"Se trimite…",
 ft_op:"Operată de PRO SMART WORK S.R.L., România",rank_zero:"Setează cel puțin o pondere mai mare decât zero."
 },
 fr:{
+doc_ppp:"Étude PPP (RO)",
 nav_products:"Produits",nav_workflow:"Fonctionnement",nav_chains:"Filières technologiques",nav_decision:"Aide à la décision",
 cta_demo:"Demander une démo",cta_products:"Découvrir les produits",
 hero_eyebrow:"Ergaxis Energy · Suite d'ingénierie",
@@ -938,7 +869,7 @@ hero_sub:"Ergaxis est une suite de logiciels d'ingénierie pour les projets éne
 hs1:"produits",hs2:"modèle de procédé commun",hs3:"langues de rapport",
 flow_title:"Filière · bilan des flux",flow_live:"Bilan bouclé",
 s_unit:"FILIÈRE",s_bio:"Biomasse",s_el:"Électricité",s_ng:"Gaz naturel",s_h2:"Hydrogène",s_meoh:"Méthanol",s_pw:"Électricité, chaleur",s_co2:"CO₂ capté",
-hero_docs_label:"Générés en EN · RO · FR",doc_fs:"Étude de faisabilité",doc_bp:"Plan d'affaires",doc_ce:"Devis estimatif",
+hero_docs_label:"Rapports en EN · RO · FR · documents légaux roumains en RO",doc_fs:"Étude de faisabilité",doc_bp:"Plan d'affaires · bientôt",doc_ce:"Devis général (RO)",
 pr_eyebrow:"Produits",pr_title:"Neuf produits. Un seul, ou toute la suite.",
 pr_sub:"Tous les produits travaillent sur la même installation calculée : les résultats restent cohérents quand vous les combinez.",
 f1t:"Modéliser",f1p:"La base d'ingénierie de chaque étude.",
@@ -946,23 +877,23 @@ f2t:"Évaluer",f2p:"Performance climatique et environnementale.",
 f3t:"Valoriser",f3p:"Coûts, rentabilité et risques.",
 f4t:"Décider et documenter",f4p:"Classement et documents d'investissement.",
 p1n:"Simulateur de procédés",p1d:"Construisez un schéma de procédé à partir de blocs dotés de leurs équations et bouclez le bilan matière et énergie de chaque courant et équipement.",
-p1s:"Modèles d'équipements simplifiés et rigoureux|Flash Peng–Robinson, NRTL, distillation MESH|Cycles vapeur IAPWS-95, ORC, pompes à chaleur|Gazéifieurs, reformeurs, électrolyseurs, captage et transport du CO₂",
-p2n:"GHG Counter",p2d:"Émissions de GES évitées selon la méthodologie du Fonds pour l'innovation de l'UE, vérifiées par rapport aux calculateurs officiels.",
+p1s:"Modèles rigoureux pour l'hydrogène et le méthanol, modèles sur fiches techniques pour les autres filières|Flash Peng–Robinson, NRTL, distillation MESH|Cycles vapeur IAPWS-95, ORC, pompes à chaleur|Gazéifieurs, reformeurs, électrolyseurs, captage et transport du CO₂|Assistant guidé, guide d'utilisation et alertes expert|Score de qualité des données par entrée, avec les priorités d'amélioration",
+p2n:"GHG Counter",p2d:"Émissions de GES évitées selon la méthodologie du Fonds pour l'innovation de l'UE, vérifiées par rapport à notre reconstruction des calculateurs officiels.",
 p2s:"Méthodologie IF25-NZT, version 5.1|Renouvelables, industries énergo-intensives, crédit de captage du carbone|Contrôle de l'appel : seuil et note des émissions évitées relatives",
 p3n:"Empreinte carbone",p3d:"Empreinte carbone du produit par kg en sortie d'usine, distincte du résultat du Fonds pour l'innovation.",
 p3s:"Fondée sur l'ISO 14067, du berceau à la porte|Carbone biogénique et absorptions suivis à part|PRG100 du règlement (UE) 2020/1044",
 p4n:"Inventaire environnemental",p4d:"Émissions atmosphériques sur site et en amont, consommation d'eau et résidus solides de l'installation calculée.",
 p4s:"Guide EMEP/AEE 2023, niveau 2|Contrôle des valeurs limites d'émission|Prélèvement et consommation d'eau, résidus",
 p5n:"Analyse technico-économique",p5d:"Investissement, coûts d'exploitation et indicateurs financiers construits à partir de l'inventaire de l'installation.",
-p5s:"Extrapolation du CAPEX et indices de coûts|LCOX, VAN, TRI, temps de retour, DSCR|Prix d'équilibre et sensibilité",
+p5s:"Extrapolation du CAPEX et indices de coûts|LCOX, VAN, TRI, temps de retour, DSCR|Prix d'équilibre et sensibilité|Revenus des absorptions de CO₂ : BECCS, DAC, biochar",
 p6n:"Analyse coûts-avantages et risques",p6d:"Analyse financière et économique avec externalités, et évaluation des risques de chaque option.",
 p6s:"Guide CE de l'ACA 2014, Vademecum 2021–2027|Valeur tutélaire du carbone, coûts des dommages de la pollution de l'air|Matrice des risques, scénarios, Monte-Carlo",
 p7n:"Devis général",p7d:"Le devis général et le tableau des dépenses PPP selon la réglementation roumaine, en lei, TVA incluse.",
 p7s:"HG 907/2016 annexe 7, modifiée par HG 1116/2023|Tableau PPP et concession, annexe 7¹|Investissement repris de l'analyse technico-économique",
-p8n:"Comparaison de scénarios",p8d:"Jusqu'à six scénarios d'un même produit côte à côte, classés selon les critères et pondérations que vous choisissez.",
-p8s:"Coût du CO₂ évité par rapport à une référence|Structure du coût actualisé|Critères et pondérations définis par l'utilisateur",
+p8n:"Comparaison de scénarios",p8d:"Jusqu'à six scénarios d'un même produit côte à côte. L'outil AMC d'Ergaxis les classe ensuite selon les critères et pondérations que vous choisissez.",
+p8s:"Coût du CO₂ évité par rapport à une référence|Structure du coût actualisé|Projets et scénarios enregistrés, avec import et export",
 p9n:"Générateur d'études de faisabilité",p9d:"Des documents construits uniquement à partir des résultats calculés ; les sections de l'auteur restent à l'auteur.",
-p9s:"Cadre de l'annexe 4 de la HG 907/2016|DOCX et PDF|Anglais, roumain, français",
+p9s:"Étude internationale selon l'ONUDI, en EN, RO et FR|HG 907/2016 annexe 4 et études PPP (annexes 4¹ et 3¹), en roumain|DOCX et PDF",
 cmp_eyebrow:"Pourquoi une seule plateforme",
 cmp_title:"Une étude qui mobilise habituellement une équipe pluridisciplinaire pendant environ deux mois.",
 cmp_body:"Ingénieurs procédés, économistes, spécialistes de l'environnement et des GES travaillent chacun avec leurs propres tableurs et outils. Chaque changement d'hypothèse doit être reporté à la main dans les bilans, les coûts, les émissions et le rapport. Dans Ergaxis, les produits partagent un même modèle : une modification se propage partout en même temps.",
@@ -976,19 +907,19 @@ w2t:"Construire la filière",w2p:"Choisissez une filière prédéfinie ou assemb
 w3t:"Boucler les bilans",w3p:"Les flux matière et énergie sont résolus pour chaque courant et chaque équipement.",
 w4t:"Évaluer",w4p:"Émissions de GES évitées, empreinte carbone, inventaire environnemental, coûts et analyse coûts-avantages sont calculés sur les mêmes flux.",
 w5t:"Décider",w5p:"Comparez les scénarios avec vos propres critères et pondérations et obtenez un classement justifiable.",
-w6t:"Documenter",w6p:"Générez l'étude de faisabilité et le devis en anglais, roumain ou français, puis complétez les sections propres au projet.",
-ch_eyebrow:"Filières technologiques",ch_title:"Des filières prédéfinies, ou les vôtres.",ch_sub:"filières technologiques prédéfinies, regroupées par familles. Chaque filière reste entièrement modifiable dans le Simulateur de procédés.",
+w6t:"Documenter",w6p:"Générez l'étude de faisabilité (internationale, en anglais, roumain ou français, ou selon la HG 907/2016, en roumain), le devis et les études PPP, puis complétez les sections propres au projet.",
+ch_eyebrow:"Filières technologiques",ch_title:"Des filières prédéfinies, ou les vôtres.",ch_sub:"filières technologiques prédéfinies et cas de référence, regroupés par familles. Chaque filière reste entièrement modifiable dans le Simulateur de procédés.",
 c1t:"Hydrogène",c1p:"Vaporeformage du méthane avec PSA, avec ou sans captage du CO₂ ; électrolyse alcaline et PEM ; gazéification de la biomasse avec ou sans BECCS.",
 c2t:"Méthanol",c2p:"Gazéification de biomasse ou de CSR, avec ou sans stockage du CO₂ ; e-méthanol à partir de CO₂ capté et d'hydrogène électrolytique.",
-c3t:"Ammoniac",c3p:"Référence par reformage conventionnel comparée à des voies bas carbone.",
-c4t:"Carburants de synthèse",c4p:"Synthèse Fischer–Tropsch et power-to-liquid.",
+c3t:"Ammoniac",c3p:"Ammoniac vert à partir d'hydrogène électrolytique, comparé au référentiel SEQE-UE.",
+c4t:"Carburants de synthèse",c4p:"Synthèse Fischer–Tropsch à partir de biomasse et kérosène power-to-liquid.",
 c5t:"Biocarburants",c5p:"HVO, EMAG, éthanol, liquéfaction hydrothermale, pyrolyse et biochar.",
 c6t:"Biogaz et biométhane",c6p:"Méthanisation, épuration, méthanation et cogénération au biogaz.",
-c7t:"Électricité et chaleur",c7p:"Cycles vapeur, ORC, pompes à chaleur et production renouvelable d'électricité, de chaleur ou de froid.",
-c8t:"Captage, transport et stockage du CO₂",c8p:"Solvants chimiques et physiques, membranes, PSA, cryogénie ; canalisation, camion, train et navire ; chaînes industrielles comme un four à clinker avec CSC.",
+c7t:"Électricité et chaleur",c7p:"Cycles vapeur, ORC, cogénération par moteurs à gaz, valorisation énergétique des déchets et pompes à chaleur. Projets éoliens et solaires via GHG Counter.",
+c8t:"Captage, transport et stockage du CO₂",c8p:"Une unité de captage configurable (solvant chimique ou physique, membranes, PSA, cryogénie) à performance définie par l'utilisateur ; captage direct dans l'air ; transport par canalisation, camion, train et navire ; cas de référence comme un four à clinker avec CSC et un hub CO₂.",
 st_av:"Disponible",st_val:"Validation finale",
 dec_eyebrow:"AMC personnalisable",dec_title:"Vos critères. Vos pondérations. Votre classement.",
-dec_sub:"Modifiez les pondérations et regardez trois voies de production d'hydrogène se reclasser. La Comparaison de scénarios n'impose aucune définition de la meilleure option : l'investisseur fixe ses priorités.",
+dec_sub:"Modifiez les pondérations et regardez trois voies de production d'hydrogène se reclasser. Ergaxis n'impose aucune définition de la meilleure option : l'investisseur fixe ses priorités.",
 k0:"Coût",k1:"Intensité GES",k2:"Efficacité énergétique",k3:"Impact environnemental",
 r0:"Électrolyse PEM (électricité renouvelable)",r1:"Vaporeformage avec captage du CO₂",r2:"Gazéification de la biomasse",
 dec_note:"Scores illustratifs, pour démonstration. Dans le produit, les scores proviennent des résultats calculés de chaque scénario.",
@@ -996,11 +927,11 @@ aud_eyebrow:"Pour qui",aud_title:"Conçue pour ceux qui préparent et approuvent
 a1t:"Bureaux d'études et conseil",a1p:"Produisez études de faisabilité et dossiers de financement à partir d'un modèle unique, cohérent et auditable.",
 a2t:"Développeurs et investisseurs",a2p:"Comparez les voies technologiques avant d'engager des capitaux.",
 a3t:"Industriels",a3p:"Évaluez les options de décarbonation de vos sites existants.",
-a4t:"Recherche et universités",a4p:"Explorez de nouvelles filières avec bilans complets et indicateurs d'impact.",
+a4t:"Recherche et universités",a4p:"Explorez de nouvelles filières avec bilans complets, émissions et indicateurs d'inventaire.",
 tr_eyebrow:"Rigueur d'ingénieur",tr_title:"Conçue pour être vérifiée, pas seulement crue.",
 t1t:"Données traçables",t1p:"Chaque valeur porte sa source et sa version, des facteurs d'émission aux hypothèses de coût. Une valeur manquante apparaît comme manquante, jamais comme zéro.",
-t2t:"En ligne, sans installation",t2p:"Fonctionne dans le navigateur comme service hébergé. Modèles et méthodologies sont mis à jour de façon centralisée.",
-t3t:"Testée face aux références",t3p:"Les résultats sont vérifiés par rapport aux calculateurs officiels et à des études de référence publiées avant chaque version.",
+t2t:"Dans le navigateur, sans installation",t2p:"Fonctionne dans le navigateur. Le service hébergé est en préparation ; modèles et méthodologies seront mis à jour de façon centralisée pour tous.",
+t3t:"Testée face aux références",t3p:"Une suite de tests automatisés vérifie les résultats par rapport aux calculateurs officiels reconstruits et à des études de référence publiées.",
 t4t:"Déploiement dédié",t4p:"Pour les organisations aux exigences strictes de confidentialité, un environnement dédié peut être étudié.",
 pl_eyebrow:"Licences",pl_title:"Un seul produit, ou toute la suite.",
 pl_sub:"Chaque produit est disponible en abonnement en ligne, seul ou au sein de la suite.",
@@ -1025,18 +956,11 @@ sm5n:"Réseau intelligent",sm5d:"Centrales géothermique, éolienne et hydrauliq
 sm6n:"Captage du CO₂",sm6d:"Captez le CO₂ des fumées, du gaz de synthèse ou de l'air et comparez les technologies.",sm6s:"Absorption, membranes, adsorption, cryogénie, DAC|Coût du captage et utilités|ACV et comparaison multicritère",
 sm7n:"Décarbonation d'une usine d'ammoniac",sm7d:"Une usine de 300 kt/an d'ammoniac : vaporeformage du méthane face à la gazéification de CSR et de briquettes.",sm7s:"Trois variantes d'alimentation|Un an d'exploitation à partir de t = 0|Retour sur investissement",
 sm8n:"Des simulateurs pour votre laboratoire",sm8d:"Licences pour salles de cours, centres de formation et équipes de salle de commande. Demandez une démonstration sur le type de centrale que vous enseignez ou exploitez.",
-nav_energy:"Énergie",nav_academy:"Academy",nav_health:"Santé",o_health:"Mon dossier médical (Health)",
-hx_eyebrow:"Ergaxis · Logiciels pour l'ingénierie, la formation, la santé et plus",hx_title:"Des logiciels bâtis sur la <em>rigueur de l'ingénieur.</em>",
-hx_sub:"Ergaxis développe des logiciels web pour plusieurs domaines. Les trois premières lignes de produits sont une suite d'ingénierie pour les projets énergétiques et de décarbonation, des simulateurs de centrales pour la formation et un dossier médical personnel. Chaque produit Ergaxis suit la même règle : tout résultat est traçable jusqu'à sa source.",
+nav_energy:"Énergie",nav_academy:"Academy",hx_eyebrow:"Ergaxis · Logiciels pour l'ingénierie, la formation et plus",hx_title:"Des logiciels bâtis sur la <em>rigueur de l'ingénieur.</em>",
+hx_sub:"Ergaxis développe des logiciels web pour plusieurs domaines. Les deux premières lignes de produits sont une suite d'ingénierie pour les projets énergétiques et de décarbonation et des simulateurs de centrales pour la formation. Chaque produit Ergaxis suit la même règle : tout résultat est traçable jusqu'à sa source.",
 hx_cta1:"Découvrir les lignes de produits",
 l1d:"Neuf produits d'ingénierie sur un même modèle de procédé, des bilans à l'étude de faisabilité.",l1m:"Bureaux d'études · développeurs · industrie",
 l2d:"Des simulateurs synoptiques de centrales et d'installations pour l'enseignement et la formation des opérateurs.",l2m:"Universités · centres de formation · exploitants",
-l3d:"Un dossier médical personnel qui classe vos analyses et les suit par rapport aux cibles cliniques.",l3m:"Patients en Roumanie · en développement",
-hl_eyebrow:"Ergaxis Health",hl_title:"Mon dossier médical",
-hl_sub:"Un dossier médical personnel pour les patients en Roumanie. Déposez vos analyses et vos comptes rendus d'imagerie. L'application les classe, suit chaque indicateur dans le temps et montre où il se situe par rapport aux cibles des recommandations cliniques actuelles.",
-hl_f:"Analyses sanguines, scanner, échographies et antécédents au même endroit|Photographiez un résultat avec votre téléphone ou déposez-le depuis votre ordinateur|Valeurs lues automatiquement et confirmées par vous en un clic|Indicateurs choisis selon les pathologies que vous déclarez|Évolution par rapport aux cibles des recommandations, par exemple le LDL-cholestérol|Données hébergées sur des serveurs dans l'UE",
-hl_status:"En développement · lancement en Roumanie",hl_note:"Mon dossier médical ne remplace pas votre médecin. Il tient vos documents en ordre pour chaque consultation.",
-hl_ch_t:"LDL-cholestérol · mg/dL",hl_ch_ex:"Données d'exemple",hl_ch_tg:"Cible 55",hl_ch_cap:"De 132 à 52 mg/dL : la cible est atteinte en novembre.",
 ft_cui:"CUI (identifiant fiscal)",ft_reg:"Registre du commerce",ft_seat:"Siège social",ft_ro:"Roumanie",f_priv:"Nous utilisons vos données uniquement pour répondre à votre demande.",f_sent:"Merci. Votre message a été envoyé et nous vous répondrons par e-mail.",f_fail:"Le message n'a pas pu être envoyé. Réessayez dans quelques minutes.",f_sending:"Envoi…",
 ft_op:"Exploitée par PRO SMART WORK S.R.L., Roumanie",rank_zero:"Fixez au moins une pondération supérieure à zéro."
 }};
