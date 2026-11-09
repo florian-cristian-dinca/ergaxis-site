@@ -84,6 +84,7 @@ header{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:co
 .lang button{font:500 .78rem/1 var(--f-mono);border:0;background:transparent;color:var(--muted);padding:.55em .7em;border-radius:999px;cursor:pointer}
 .lang button[aria-pressed="true"]{background:var(--ink);color:var(--btn-ink)}
 .nav .btn{padding:.7em 1.1em;font-size:.86rem}
+.nav .signin[hidden]{display:none}
 @media (max-width:980px){.navlinks{display:none}.lang{margin-left:auto}}
 @media (max-width:520px){.nav .btn{display:none}.nav{gap:12px}}
 
@@ -295,6 +296,7 @@ footer{padding-block:36px;border-top:1px solid var(--line);font-size:.85rem;colo
       <button type="button" id="l-ro" data-l="ro" aria-pressed="false">RO</button>
       <button type="button" id="l-fr" data-l="fr" aria-pressed="false">FR</button>
     </div>
+    <a class="btn btn-ghost signin" id="signin" href="https://app.ergaxis.com/login" data-i="cta_signin" hidden>Client sign-in</a>
     <a class="btn btn-solid" href="#contact" data-i="cta_demo">Request a demo</a>
   </div>
 </header>
@@ -652,7 +654,7 @@ const T={
 en:{
 doc_ppp:"PPP study (RO)",
 nav_products:"Products",nav_workflow:"How it works",nav_chains:"Technology chains",nav_decision:"Decision analysis",
-cta_demo:"Request a demo",cta_products:"Explore the products",
+cta_demo:"Request a demo",cta_signin:"Client sign-in",cta_products:"Explore the products",
 hero_eyebrow:"Ergaxis Energy · Engineering suite",
 hero_title:"From energy concept to <em>investment decision.</em>",
 hero_sub:"Ergaxis is a suite of engineering software products for energy and decarbonisation projects. Each product can be used on its own. Together they share one process model: balances, GHG, environment, costs, decision and the feasibility study all describe the same plant.",
@@ -757,7 +759,7 @@ ft_op:"Operated by PRO SMART WORK S.R.L., Romania",rank_zero:"Set at least one w
 ro:{
 doc_ppp:"Studiu PPP (RO)",
 nav_products:"Produse",nav_workflow:"Cum funcționează",nav_chains:"Lanțuri tehnologice",nav_decision:"Analiză decizională",
-cta_demo:"Solicită o demonstrație",cta_products:"Descoperă produsele",
+cta_demo:"Solicită o demonstrație",cta_signin:"Autentificare clienți",cta_products:"Descoperă produsele",
 hero_eyebrow:"Ergaxis Energy · Suită de inginerie",
 hero_title:"De la conceptul energetic la <em>decizia de investiție.</em>",
 hero_sub:"Ergaxis este o suită de produse software de inginerie pentru proiecte energetice și de decarbonizare. Fiecare produs poate fi folosit independent. Împreună, împart un singur model de proces: bilanțurile, GHG, mediul, costurile, decizia și studiul de fezabilitate descriu aceeași instalație.",
@@ -862,7 +864,7 @@ ft_op:"Operată de PRO SMART WORK S.R.L., România",rank_zero:"Setează cel puț
 fr:{
 doc_ppp:"Étude PPP (RO)",
 nav_products:"Produits",nav_workflow:"Fonctionnement",nav_chains:"Filières technologiques",nav_decision:"Aide à la décision",
-cta_demo:"Demander une démo",cta_products:"Découvrir les produits",
+cta_demo:"Demander une démo",cta_signin:"Espace clients",cta_products:"Découvrir les produits",
 hero_eyebrow:"Ergaxis Energy · Suite d'ingénierie",
 hero_title:"Du concept énergétique à la <em>décision d'investissement.</em>",
 hero_sub:"Ergaxis est une suite de logiciels d'ingénierie pour les projets énergétiques et de décarbonation. Chaque produit s'utilise seul. Ensemble, ils partagent un même modèle de procédé : bilans, GES, environnement, coûts, décision et étude de faisabilité décrivent la même installation.",
@@ -966,6 +968,8 @@ ft_op:"Exploitée par PRO SMART WORK S.R.L., Roumanie",rank_zero:"Fixez au moins
 }};
 
 let lang="en";
+/* Client sign-in to the platform (app.ergaxis.com): set SIGNIN to true at the launch – until then the button stays hidden */
+const SIGNIN=false, APP_URL="https://app.ergaxis.com";
 function apply(l){
   lang=T[l]?l:"en";
   const d=T[lang];
@@ -974,6 +978,7 @@ function apply(l){
   document.querySelectorAll("[data-l]").forEach(el=>{const v=d[el.dataset.l];if(v!==undefined)el.innerHTML=v.split("|").map(x=>"<li>"+x+"</li>").join("");});
   document.querySelectorAll(".lang button").forEach(b=>b.setAttribute("aria-pressed",b.dataset.l===lang?"true":"false"));
   try{localStorage.setItem("ep-lang",lang)}catch(e){}
+  if(SIGNIN){const s=document.getElementById("signin");s.hidden=false;s.href=APP_URL+"/login?lang="+lang;}
   rank();
   const ok=document.getElementById("fok"); if(!ok.hidden) ok.hidden=true;
 }
