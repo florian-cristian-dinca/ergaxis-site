@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="Ergaxis develops web software for engineering and training: an engineering suite for energy and decarbonisation projects and plant simulators for training.">
+<meta name="description" content="Ergaxis develops web software for engineering and training: an engineering suite for energy and decarbonisation projects, a residential solar design application and plant simulators for training.">
 <style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0;font-family:system-ui,sans-serif;font-size:14px}img{max-width:100%}[hidden]{display:none!important}</style>
 <title>Ergaxis</title>
 <meta name="claude:viewport-fit-sides" content="cover">
@@ -289,6 +289,7 @@ footer{padding-block:36px;border-top:1px solid var(--line);font-size:.85rem;colo
     <nav class="navlinks" aria-label="Main">
       <a href="#energy" data-i="nav_energy">Energy</a>
       <a href="#products" data-i="nav_products">Products</a>
+      <a href="#solar" data-i="nav_solar">Solar Designer</a>
       <a href="#simulators" data-i="nav_academy">Academy</a>
     </nav>
     <div class="lang" role="group" aria-label="Language">
@@ -323,6 +324,11 @@ footer{padding-block:36px;border-top:1px solid var(--line);font-size:.85rem;colo
       <a class="line l-ac" href="#simulators">
         <svg class="line-ic" viewBox="0 0 48 48" aria-hidden="true"><rect x="4" y="8" width="40" height="28" rx="3" fill="none" stroke="var(--ink)" stroke-width="3"/><circle cx="14" cy="22" r="5" fill="none" stroke="var(--cold)" stroke-width="3"/><path d="M24 17h14M24 22h10M24 27h12" stroke="var(--hot)" stroke-width="3"/><path d="M18 42h12" stroke="var(--ink)" stroke-width="3"/></svg>
         <span class="line-body"><b>Ergaxis Academy</b><span data-i="l2d"></span><small data-i="l2m"></small></span>
+        <span class="line-go" aria-hidden="true">→</span>
+      </a>
+      <a class="line l-so" href="#solar">
+        <svg class="line-ic" viewBox="0 0 48 48" aria-hidden="true"><circle cx="36" cy="11" r="6" fill="none" stroke="var(--hot)" stroke-width="3"/><path d="M8 40 L14 20 H40 L34 40 Z" fill="none" stroke="var(--ink)" stroke-width="3" stroke-linejoin="round"/><path d="M11 30 H37 M21 20 L18 40 M30 20 L27 40" stroke="var(--cold)" stroke-width="2.4"/></svg>
+        <span class="line-body"><b>Ergaxis Solar Designer</b><span data-i="l3d"></span><small data-i="l3m"></small></span>
         <span class="line-go" aria-hidden="true">→</span>
       </a>
       </div>
@@ -576,6 +582,27 @@ footer{padding-block:36px;border-top:1px solid var(--line);font-size:.85rem;colo
 </section>
 
 <!-- SIMULATORS -->
+<!-- SOLAR DESIGNER (stand-alone application) -->
+<section id="solar" style="padding-top:clamp(24px,4vw,48px)">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow" data-i="sd_eyebrow">Ergaxis Solar Designer · Stand-alone application</span>
+      <h2 data-i="sd_title">…</h2>
+      <p class="lead" data-i="sd_sub">…</p>
+    </div>
+    <div class="fams">
+      <div class="fam">
+        <div class="fam-h"><span class="fam-code">PV · BESS</span><h3 data-i="sd_ft">Residential solar</h3><p data-i="sd_fp"></p></div>
+        <div class="prods">
+          <article class="prod wide"><span class="prod-code">SD-PRO</span><h4 data-i="sd_n"></h4><p data-i="sd_d"></p><ul data-l="sd_s"></ul>
+            <div class="cta-row" style="margin-top:8px"><a class="btn btn-solid" href="#contact" data-i="cta_demo">Request a demo</a></div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section id="simulators" class="sims">
   <div class="wrap">
     <div class="sec-head">
@@ -628,6 +655,7 @@ footer{padding-block:36px;border-top:1px solid var(--line);font-size:.85rem;colo
           <option value="General Cost Estimate" data-i="p7n">General Cost Estimate</option>
           <option value="Scenario Comparison" data-i="p8n">Scenario Comparison</option>
           <option value="Feasibility Study Generator" data-i="p9n">Feasibility Study Generator</option>
+          <option value="Solar Designer Pro" data-i="sd_n">Solar Designer Pro</option>
           <option value="Training simulators (Academy)" data-i="o_sims">Training simulators</option>
         </select></div>
       <div class="fld full"><label for="fm" data-i="f_msg">Message (optional)</label><textarea id="fm" name="message" rows="4"></textarea></div>
@@ -749,10 +777,10 @@ sm6n:"CO₂ Capture",sm6d:"Capture CO₂ from flue gas, syngas or air and compar
 sm7n:"Ammonia Plant Decarbonisation",sm7d:"A 300 kt/yr ammonia plant: steam methane reforming against RDF and briquette gasification.",sm7s:"Three supply variants|One year of operation from t = 0|Investment payback",
 sm8n:"Simulators for your lab",sm8d:"Licences for classrooms, training centres and control-room teams. Ask for a demonstration on the plant type you teach or operate.",
 nav_energy:"Energy",nav_academy:"Academy",hx_eyebrow:"Ergaxis · Software for engineering, training and more",hx_title:"Software built on <em>engineering rigour.</em>",
-hx_sub:"Ergaxis develops web software for several fields. The first two product lines are an engineering suite for energy and decarbonisation projects and plant simulators for training. Every Ergaxis product follows the same rule: each result can be traced back to its source.",
+hx_sub:"Ergaxis develops web software for several fields. The first three product lines are an engineering suite for energy and decarbonisation projects, a residential solar design application and plant simulators for training. Every Ergaxis product follows the same rule: each result can be traced back to its source.",
 hx_cta1:"Explore the product lines",
 l1d:"Nine engineering products on one process model, from mass balances to the feasibility study.",l1m:"Consultancies · developers · industry",
-l2d:"Synoptic simulators of power and process plants for teaching and operator training.",l2m:"Universities · training centres · operators",
+l2d:"Synoptic simulators of power and process plants for teaching and operator training.",l2m:"Universities · training centres · operators",nav_solar:"Solar Designer",l3d:"Stand-alone application for designing residential PV systems with batteries, from the load inventory to the cost estimate.",l3m:"Installers · designers · energy consultants",sd_eyebrow:"Ergaxis Solar Designer · Stand-alone application",sd_title:"Residential PV and battery systems, designed and costed.",sd_sub:"A separate application, licensed independently of the engineering suite. It sizes rooftop photovoltaic systems with batteries and inverters from the real consumption of the house and checks every component against the others.",sd_ft:"Residential solar",sd_fp:"Photovoltaics, batteries, inverters and thermal storage for houses.",sd_n:"Solar Designer Pro",sd_d:"From the household load inventory and roof geometry to a validated configuration, an itemised cost estimate and the preliminary technical documentation.",sd_s:"Hourly simulation over 8,760 h, battery strategies and grid-connection checks|Equipment catalogue with datasheet traceability and automatic compatibility checks|Interactive configurator that blocks incompatible connections|Roof layout at scale, mounting by roof type, preliminary snow and wind loads|Itemised cost estimate, NPV, IRR, LCOE and GHG balance|Preliminary documentation in 13 chapters, DOCX and SVG export",
 ft_cui:"VAT ID (CUI)",ft_reg:"Trade Register",ft_seat:"Registered office",ft_ro:"Romania",f_priv:"We use the details you send only to answer your request.",f_sent:"Thank you. Your message was sent and we will reply by email.",f_fail:"The message could not be sent. Please try again in a few minutes.",f_sending:"Sending…",
 ft_op:"Operated by PRO SMART WORK S.R.L., Romania",rank_zero:"Set at least one weight above zero."
 },
@@ -854,10 +882,10 @@ sm6n:"Captarea CO₂",sm6d:"Capturezi CO₂ din gaze de ardere, gaz de sinteză 
 sm7n:"Decarbonizarea unei fabrici de amoniac",sm7d:"O fabrică de 300 kt/an de amoniac: reformare cu abur a metanului față de gazeificarea RDF și a brichetelor.",sm7s:"Trei variante de alimentare|Un an de funcționare de la t = 0|Recuperarea investiției",
 sm8n:"Simulatoare pentru laboratorul tău",sm8d:"Licențe pentru săli de curs, centre de instruire și echipe din camera de comandă. Cere o demonstrație pe tipul de centrală pe care îl predai sau îl operezi.",
 nav_energy:"Energie",nav_academy:"Academy",hx_eyebrow:"Ergaxis · Software pentru inginerie, instruire și nu numai",hx_title:"Software construit cu <em>rigoare inginerească.</em>",
-hx_sub:"Ergaxis dezvoltă software web pentru mai multe domenii. Primele două linii de produse sunt o suită de inginerie pentru proiecte energetice și de decarbonizare și simulatoare de centrale pentru instruire. Fiecare produs Ergaxis respectă aceeași regulă: orice rezultat poate fi urmărit până la sursa lui.",
+hx_sub:"Ergaxis dezvoltă software web pentru mai multe domenii. Primele trei linii de produse sunt o suită de inginerie pentru proiecte energetice și de decarbonizare, o aplicație de proiectare a sistemelor fotovoltaice rezidențiale și simulatoare de centrale pentru instruire. Fiecare produs Ergaxis respectă aceeași regulă: orice rezultat poate fi urmărit până la sursa lui.",
 hx_cta1:"Descoperă liniile de produse",
 l1d:"Nouă produse de inginerie pe un singur model de proces, de la bilanțuri la studiul de fezabilitate.",l1m:"Firme de consultanță · dezvoltatori · industrie",
-l2d:"Simulatoare sinoptice de centrale și instalații pentru învățământ și instruirea operatorilor.",l2m:"Universități · centre de instruire · operatori",
+l2d:"Simulatoare sinoptice de centrale și instalații pentru învățământ și instruirea operatorilor.",l2m:"Universități · centre de instruire · operatori",nav_solar:"Solar Designer",l3d:"Aplicație de sine stătătoare pentru proiectarea sistemelor fotovoltaice rezidențiale cu baterii, de la inventarul consumatorilor la deviz.",l3m:"Instalatori · proiectanți · consultanți în energie",sd_eyebrow:"Ergaxis Solar Designer · Aplicație de sine stătătoare",sd_title:"Sisteme fotovoltaice rezidențiale cu baterii, proiectate și evaluate.",sd_sub:"O aplicație separată, licențiată independent de suita de inginerie. Dimensionează sisteme fotovoltaice pe acoperiș, cu baterii și invertor, pornind de la consumul real al locuinței, și verifică fiecare componentă față de celelalte.",sd_ft:"Solar rezidențial",sd_fp:"Fotovoltaice, baterii, invertoare și stocare termică pentru locuințe.",sd_n:"Solar Designer Pro",sd_d:"De la inventarul consumatorilor și geometria acoperișului la o configurație validată, deviz detaliat și documentația tehnică preliminară.",sd_s:"Simulare orară pe 8.760 h, strategii pentru baterie și verificarea racordului|Catalog de echipamente cu trasabilitatea fișelor tehnice și verificarea automată a compatibilității|Configurator interactiv care blochează conexiunile incompatibile|Amplasarea panourilor la scară, prindere după tipul învelitorii, încărcări preliminare din zăpadă și vânt|Deviz detaliat, VAN, RIR, LCOE și bilanț GHG|Documentație preliminară în 13 capitole, export DOCX și SVG",
 ft_cui:"CUI",ft_reg:"Nr. Reg. Com.",ft_seat:"Sediu social",ft_ro:"România",f_priv:"Folosim datele trimise doar pentru a-ți răspunde la solicitare.",f_sent:"Mulțumim. Mesajul a fost trimis și îți vom răspunde pe e-mail.",f_fail:"Mesajul nu a putut fi trimis. Încearcă din nou peste câteva minute.",f_sending:"Se trimite…",
 ft_op:"Operată de PRO SMART WORK S.R.L., România",rank_zero:"Setează cel puțin o pondere mai mare decât zero."
 },
@@ -959,10 +987,10 @@ sm6n:"Captage du CO₂",sm6d:"Captez le CO₂ des fumées, du gaz de synthèse o
 sm7n:"Décarbonation d'une usine d'ammoniac",sm7d:"Une usine de 300 kt/an d'ammoniac : vaporeformage du méthane face à la gazéification de CSR et de briquettes.",sm7s:"Trois variantes d'alimentation|Un an d'exploitation à partir de t = 0|Retour sur investissement",
 sm8n:"Des simulateurs pour votre laboratoire",sm8d:"Licences pour salles de cours, centres de formation et équipes de salle de commande. Demandez une démonstration sur le type de centrale que vous enseignez ou exploitez.",
 nav_energy:"Énergie",nav_academy:"Academy",hx_eyebrow:"Ergaxis · Logiciels pour l'ingénierie, la formation et plus",hx_title:"Des logiciels bâtis sur la <em>rigueur de l'ingénieur.</em>",
-hx_sub:"Ergaxis développe des logiciels web pour plusieurs domaines. Les deux premières lignes de produits sont une suite d'ingénierie pour les projets énergétiques et de décarbonation et des simulateurs de centrales pour la formation. Chaque produit Ergaxis suit la même règle : tout résultat est traçable jusqu'à sa source.",
+hx_sub:"Ergaxis développe des logiciels web pour plusieurs domaines. Les trois premières lignes de produits sont une suite d'ingénierie pour les projets énergétiques et de décarbonation, une application de conception photovoltaïque résidentielle et des simulateurs de centrales pour la formation. Chaque produit Ergaxis suit la même règle : tout résultat est traçable jusqu'à sa source.",
 hx_cta1:"Découvrir les lignes de produits",
 l1d:"Neuf produits d'ingénierie sur un même modèle de procédé, des bilans à l'étude de faisabilité.",l1m:"Bureaux d'études · développeurs · industrie",
-l2d:"Des simulateurs synoptiques de centrales et d'installations pour l'enseignement et la formation des opérateurs.",l2m:"Universités · centres de formation · exploitants",
+l2d:"Des simulateurs synoptiques de centrales et d'installations pour l'enseignement et la formation des opérateurs.",l2m:"Universités · centres de formation · exploitants",nav_solar:"Solar Designer",l3d:"Application autonome de conception d'installations photovoltaïques résidentielles avec batteries, de l'inventaire des consommations au devis.",l3m:"Installateurs · bureaux d'études · conseillers en énergie",sd_eyebrow:"Ergaxis Solar Designer · Application autonome",sd_title:"Installations photovoltaïques résidentielles avec batteries, conçues et chiffrées.",sd_sub:"Une application distincte, sous licence indépendante de la suite d'ingénierie. Elle dimensionne les installations photovoltaïques en toiture avec batteries et onduleur à partir de la consommation réelle de la maison et vérifie chaque composant par rapport aux autres.",sd_ft:"Solaire résidentiel",sd_fp:"Photovoltaïque, batteries, onduleurs et stockage thermique pour les maisons.",sd_n:"Solar Designer Pro",sd_d:"De l'inventaire des consommations et de la géométrie de la toiture à une configuration validée, un devis détaillé et la documentation technique préliminaire.",sd_s:"Simulation horaire sur 8 760 h, stratégies de batterie et vérification du raccordement|Catalogue d'équipements avec traçabilité des fiches techniques et contrôle automatique de compatibilité|Configurateur interactif qui bloque les connexions incompatibles|Implantation des modules à l'échelle, fixation selon la couverture, charges préliminaires de neige et de vent|Devis détaillé, VAN, TRI, LCOE et bilan GES|Documentation préliminaire en 13 chapitres, export DOCX et SVG",
 ft_cui:"CUI (identifiant fiscal)",ft_reg:"Registre du commerce",ft_seat:"Siège social",ft_ro:"Roumanie",f_priv:"Nous utilisons vos données uniquement pour répondre à votre demande.",f_sent:"Merci. Votre message a été envoyé et nous vous répondrons par e-mail.",f_fail:"Le message n'a pas pu être envoyé. Réessayez dans quelques minutes.",f_sending:"Envoi…",
 ft_op:"Exploitée par PRO SMART WORK S.R.L., Roumanie",rank_zero:"Fixez au moins une pondération supérieure à zéro."
 }};
